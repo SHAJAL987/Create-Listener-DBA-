@@ -1,0 +1,92 @@
+-----------------------------------------------
+To create listener,i used Oracle Net manager -
+-----------------------------------------------
+  STEP: 1 (Finding Net Manager)
+  ------------------------------
+     # Click window icon in your computer and search "Oracle - OraDB12Home1.
+     # In Oracle-OraDB12Home1 you will find "Net Manager" and enter into it.
+
+  STEP: 2 (Net Manager Interface)
+  -------------------------------
+     # In net managere you can see -
+          - Oracle Net Configuration 
+            + Local
+     # Click + button that means enter into Local options
+        |
+        + Profile
+        | 
+        + Service Naming
+        |
+        + Listeners
+     # Click into the "Listeners" then you can see the create (+) option will signal
+       you that means you are ready to create a lisener (NB: Left site Big plus 
+       button will be green afte clicking listener option, in the previous time it
+       was disable) and also you can see your Old listeners that are currently 
+       using 
+
+   STEP: 3 (Listener Configuration)
+   --------------------------------
+     # Click green plus button then system will provite you a prompt items that is 
+       "Choose Listener Name". Provide your Listener name.
+      
+     # Then You will see a Combo-box that are showing Four option 
+         - General Parameters.
+         - Listening Locations.
+         - Database Services.
+         - Other Servicecs.
+     # Select "Listening Locations" from combo-box and click "Add Address" button
+       Now, Net meneger showing 'NETWORK ADDRESS' that are containing 
+         - Protocol: TCP/IP, othes
+         - Host: DESKTOP-2ICQABG (my PC host name) or Your Machine host name 
+         - Port: 1521 (default listener port name)
+     # Here all the options remain same,you have to change Port number (ex-1540)
+       only.
+     # Now again click combo-box and select "Database Services" and Click 
+       "Add Database" Button that contining
+           Database 1: 
+                 - Global Database Name: (Provide your database name. ex-DBA150)
+                 - Oracle Home Directiory: (ex- C:\app\shajal\product\12.1.0\dbhome_1)
+                 - SID: Provide your Database SID. If you dont find any SID from Service 
+                   that means you SID is same as you database name. ex-DBA150. or
+                   if you database name is ORCL the SID will be ORCL definitely.
+   
+   STEP: 4 ( Listener Service Naming) 
+   ----------------------------------
+     # Click into Service Naming Option then You will find
+         - ORCL or your database name.
+         - oraclr_connection_data
+     # Click into ORCL or your database name
+     # Go to the Address Configuration option and click green plus button
+     # Another Address is created then Provide same "Port Number (1540)"
+     
+   STEP: 5 (Save all Changes)
+   --------------------------
+     # Click File ( from net manager menu) and "Save Network Configuration" 
+
+
+   ------------------------------------------------------------------------------
+   		            C O N G R A T U L A T I O N S !!!!!
+   ------------------------------------------------------------------------------
+       
+   Enable Listener: 
+   ----------------
+     # Go to The Command Prompt(CMD) and Enter Run as administrator and follow those comments.
+        
+        C:\WINDOWS\system32>LSNRCTL
+        LSNRCTL>START PRACTICE (your listener name)
+                
+           // first time it may or may not show an error. run given code again
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+      
